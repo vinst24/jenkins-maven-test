@@ -32,7 +32,27 @@ public class GradeConverterTest {
         String actual = converter.convert(80);
         assertEquals(expected,actual);
     }
-
-
-
+    @Test
+    public void testConvert4() throws Exception {
+        String expected = "C";
+        String actual = converter.convert(70);
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void testConvert5() throws Exception {
+        String expected = "D";
+        String actual = converter.convert(60);
+        assertEquals(expected,actual);
+    }
+    @Test
+    public void testConvert6() throws Exception {
+        String expected = "E";
+        String actual = converter.convert(50);
+        assertEquals(expected,actual);
+    }
+    @Test
+    public void testConvert7() throws Exception {
+        String expected = "Invalid";
+        String actual = converter.convert(101);
+    }
 }
