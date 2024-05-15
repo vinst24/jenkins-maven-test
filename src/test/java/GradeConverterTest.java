@@ -54,5 +54,14 @@ public class GradeConverterTest {
     public void testConvert7() throws Exception {
         String expected = "Invalid";
         String actual = converter.convert(101);
+        assertEquals(expected,actual);
     }
+    @Test
+    public void testConvert8() throws Exception {
+        String expected = "Invalid";
+        String actual = converter.convert(-10);
+        assertEquals(expected,actual);
+    }
+
+
 }
