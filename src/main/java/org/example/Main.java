@@ -15,6 +15,6 @@ public final class Main {
      * @param args the command-line arguments
      */
     public static void main(final String[] args) {
-        System.out.println("Run tests using JUnit.");
+        System.out.println("Run tests using JUnit.\n");
     }
 }

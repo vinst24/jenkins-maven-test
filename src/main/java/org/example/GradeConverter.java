@@ -1,26 +1,32 @@
-package org.example;
-
 /**
- * A utility class to convert numerical scores into letter grades.
+ * Converts numerical scores into letter grades.
  */
+package org.example;
 public final class GradeConverter {
 
+    private static final int MAX_SCORE = 100;
+    private static final int MIN_SCORE = 0;
+    private static final int A_MIN = 90;
+    private static final int B_MIN = 80;
+    private static final int C_MIN = 70;
+    private static final int D_MIN = 60;
+
     /**
-     * Converts a score to a letter grade.
+     * Converts a numerical score to a letter grade.
      *
-     * @param score the numerical score to convert
-     * @return the corresponding letter grade or "Invalid"
+     * @param score the score to convert
+     * @return the letter grade as a String
      */
     public static String convert(final int score) {
-        if (score >= 90 && score <= 100) {
+        if (score <= MAX_SCORE && score >= A_MIN) {
             return "A";
-        } else if (score >= 80 && score <= 89) {
+        } else if (score < A_MIN && score >= B_MIN) {
             return "B";
-        } else if (score >= 70 && score <= 79) {
+        } else if (score < B_MIN && score >= C_MIN) {
             return "C";
-        } else if (score >= 60 && score <= 69) {
+        } else if (score < C_MIN && score >= D_MIN) {
             return "D";
-        } else if (score >= 0 && score <= 59) {
+        } else if (score < D_MIN && score >= MIN_SCORE) {
             return "E";
         } else {
             return "Invalid";
