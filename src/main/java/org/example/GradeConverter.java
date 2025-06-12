@@ -4,11 +4,17 @@
 package org.example;
 public final class GradeConverter {
 
+    //Diem toi da
     private static final int MAX_SCORE = 100;
+    //Diem toi thieu
     private static final int MIN_SCORE = 0;
+    //Diem toi thieu A
     private static final int A_MIN = 90;
+    //Diem toi thieu B
     private static final int B_MIN = 80;
+    //Diem toi thieu C
     private static final int C_MIN = 70;
+    //Diem toi thieu D
     private static final int D_MIN = 60;
 
     /**

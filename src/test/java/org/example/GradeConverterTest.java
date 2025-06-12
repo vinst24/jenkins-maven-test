@@ -21,14 +21,23 @@ public class GradeConverterTest {
         converter = new GradeConverter();
     }
 
+    //Diem toi da A
     private static final int SCORE_A_MAX = 100;
+    //Diem toi thieu A
     private static final int SCORE_A_MIN = 90;
+    //Diem toi thieu B
     private static final int SCORE_B_MIN = 80;
+    //Diem toi thieu C
     private static final int SCORE_C_MIN = 70;
+    //Diem toi thieu D
     private static final int SCORE_D_MIN = 60;
+    //Diem toi thieu E
     private static final int SCORE_E_MIN = 0;
+    //Diem khong hop le tren high
     private static final int SCORE_INVALID_HIGH = 101;
+    //Diem khong hop le duoi low
     private static final int SCORE_INVALID_LOW = -10;
+    //Diem cua E
     private static final int SCORE_E_VALUE = 50;
 
     /** Test conversion of score 100 to grade A. */
