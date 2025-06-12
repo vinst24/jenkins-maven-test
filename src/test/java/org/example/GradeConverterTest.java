@@ -1,118 +1,67 @@
-import org.junit.Test;
+package org.example;
+
 import org.junit.Before;
+import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 /**
- * Unit tests for the GradeConverter class.
+ * Unit tests for GradeConverter.
  */
 public class GradeConverterTest {
 
     private GradeConverter converter;
 
-    /**
-     * Sets up the test environment.
-     *
-     * @throws Exception if setup fails
-     */
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         converter = new GradeConverter();
     }
 
-    /**
-     * Tests conversion for score 100.
-     *
-     * @throws Exception if test fails
-     */
+    /** Test for score 100. */
     @Test
-    public void testConvert1() throws Exception {
-        final String expected = "A";
-        final String actual = converter.convert(100);
-        assertEquals(expected, actual);
+    public void testConvert100() {
+        assertEquals("A", GradeConverter.convert(100));
     }
 
-    /**
-     * Tests conversion for score 90.
-     *
-     * @throws Exception if test fails
-     */
+    /** Test for score 90. */
     @Test
-    public void testConvert2() throws Exception {
-        final String expected = "A";
-        final String actual = converter.convert(90);
-        assertEquals(expected, actual);
+    public void testConvert90() {
+        assertEquals("A", GradeConverter.convert(90));
     }
 
-    /**
-     * Tests conversion for score 80.
-     *
-     * @throws Exception if test fails
-     */
+    /** Test for score 80. */
     @Test
-    public void testConvert3() throws Exception {
-        final String expected = "B";
-        final String actual = converter.convert(80);
-        assertEquals(expected, actual);
+    public void testConvert80() {
+        assertEquals("B", GradeConverter.convert(80));
     }
 
-    /**
-     * Tests conversion for score 70.
-     *
-     * @throws Exception if test fails
-     */
+    /** Test for score 70. */
     @Test
-    public void testConvert4() throws Exception {
-        final String expected = "C";
-        final String actual = converter.convert(70);
-        assertEquals(expected, actual);
+    public void testConvert70() {
+        assertEquals("C", GradeConverter.convert(70));
     }
 
-    /**
-     * Tests conversion for score 60.
-     *
-     * @throws Exception if test fails
-     */
+    /** Test for score 60. */
     @Test
-    public void testConvert5() throws Exception {
-        final String expected = "D";
-        final String actual = converter.convert(60);
-        assertEquals(expected, actual);
+    public void testConvert60() {
+        assertEquals("D", GradeConverter.convert(60));
     }
 
-    /**
-     * Tests conversion for score 50.
-     *
-     * @throws Exception if test fails
-     */
+    /** Test for score 50. */
     @Test
-    public void testConvert6() throws Exception {
-        final String expected = "E";
-        final String actual = converter.convert(50);
-        assertEquals(expected, actual);
+    public void testConvert50() {
+        assertEquals("E", GradeConverter.convert(50));
     }
 
-    /**
-     * Tests conversion for score above 100.
-     *
-     * @throws Exception if test fails
-     */
+    /** Test for score above 100. */
     @Test
-    public void testConvert7() throws Exception {
-        final String expected = "Invalid";
-        final String actual = converter.convert(101);
-        assertEquals(expected, actual);
+    public void testConvertInvalidHigh() {
+        assertEquals("Invalid", GradeConverter.convert(101));
     }
 
-    /**
-     * Tests conversion for score below 0.
-     *
-     * @throws Exception if test fails
-     */
+    /** Test for negative score. */
     @Test
-    public void testConvert8() throws Exception {
-        final String expected = "Invalid";
-        final String actual = converter.convert(-10);
-        assertEquals(expected, actual);
+    public void testConvertInvalidLow() {
+        assertEquals("Invalid", GradeConverter.convert(-10));
     }
 }

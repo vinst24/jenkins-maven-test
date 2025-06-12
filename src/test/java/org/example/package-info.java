@@ -1,4 +1,4 @@
 /**
- * Provides core functionality for grade conversion.
+ * Contains unit tests for the grade conversion logic.
  */
 package org.example;
